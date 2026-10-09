@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "c31ba7f2a29f3895",
+    "type": "split",
+    "children": [
+      {
+        "id": "14a1252ba3aa93c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3bae68a550644d48",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "065a76438d498a10",
+    "type": "split",
+    "children": [
+      {
+        "id": "06d6fff5697f119b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50c2d1298733ffeb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "5e4181056b8563ed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#连接",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "e28a1ca411e047b9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e9e09b2ed7a84eff",
+    "type": "split",
+    "children": [
+      {
+        "id": "ff1aebaf25892277",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ea551c114f502ba",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "文件操作.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "f5f5f398e9f2e6e4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "文件操作.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "3ebf7ab3805a2ed4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "27957a1fd5afef1b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "4f24427368dfdbc7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2026-10-09.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "50c2d1298733ffeb",
+  "lastOpenFiles": [
+    "RDMA 索引.md",
+    "RDMA面试.md",
+    "RDMA.md",
+    "未命名.base",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "2026-10-09.md",
+    "fastblock/FastBlock 结构体与缩写对照表.md",
+    "fastblock/简历.md",
+    "fastblock/FastBlock Volume QoS 前置调研.md",
+    "fastblock/FastBlock-IO主流程核心类全景.md",
+    "fastblock/NVME.md",
+    "fastblock/SPDK.md",
+    "fastblock/QoS设计.md",
+    "fastblock/系统架构.md",
+    "fastblock/函数名称.md",
+    "fastblock/FastBlock 第一阶段复习：上层 IO → PG.md",
+    "文件操作.md",
+    "块存储/通过数据库理解块存储的使用方式.md",
+    "文件系统结构/Linux ext4：HTree 目录索引.md",
+    "学习.md",
+    "欢迎.md",
+    "模版/C++ overload 模板知识点简记.md",
+    "模版",
+    "fastblock",
+    "块存储/什么是块存储.md",
+    "块存储",
+    "文件系统结构/Windows NTFS：B+树目录索引.md",
+    "文件系统结构/文件系统.md",
+    "openssl 哈希计算.md",
+    "文件系统结构",
+    "磁盘虚拟",
+    "强制转换.md",
+    "CV条件变量.md",
+    "分布式存储细节"
+  ]
+}
