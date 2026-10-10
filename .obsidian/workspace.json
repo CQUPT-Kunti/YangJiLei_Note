@@ -188,6 +188,7 @@
   },
   "active": "3bae68a550644d48",
   "lastOpenFiles": [
+    "README.md",
     "RDMA 索引.md",
     "CQUPT_Raft/基于protobuf实现的RDMA RPC 框架.md",
     "CQUPT_Raft",
@@ -221,7 +222,6 @@
     "模版",
     "fastblock",
     "块存储",
-    "文件系统结构/Windows NTFS：B+树目录索引.md",
     "文件系统结构",
     "磁盘虚拟",
     "分布式存储细节"
