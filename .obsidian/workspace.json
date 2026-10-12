@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CQUPT_Raft/基于protobuf实现的RDMA RPC 框架.md",
+                "file": "八股文/10.12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "基于protobuf实现的RDMA RPC 框架"
+              "title": "10.12"
             }
           }
         ]
@@ -188,15 +188,20 @@
   },
   "active": "3bae68a550644d48",
   "lastOpenFiles": [
+    "八股文/八股文索引.md",
+    "八股文/10.12.md",
+    "八股文/互斥锁、拷贝构造、内存泄漏.md",
+    "八股文/关键词.md",
+    "八股文/IO 多路复用.md",
+    "fastblock/RDMA Rpc 框架.md",
+    "CQUPT_Raft/基于protobuf实现的RDMA RPC 框架.md",
+    "fastblock/FastBlock-IO主流程核心类全景.md",
+    "fastblock/FastBlock 结构体与缩写对照表.md",
     "README.md",
     "RDMA 索引.md",
-    "CQUPT_Raft/基于protobuf实现的RDMA RPC 框架.md",
     "CQUPT_Raft",
     "RDMA面试.md",
     "RDMA.md",
-    "fastblock/FastBlock 结构体与缩写对照表.md",
-    "八股文/八股文索引.md",
-    "八股文/互斥锁、拷贝构造、内存泄漏.md",
     "八股文/10.9.md",
     "学习.md",
     "块存储/什么是块存储.md",
@@ -208,17 +213,12 @@
     "未命名 1.canvas",
     "fastblock/简历.md",
     "fastblock/FastBlock Volume QoS 前置调研.md",
-    "fastblock/FastBlock-IO主流程核心类全景.md",
     "fastblock/NVME.md",
     "fastblock/SPDK.md",
     "fastblock/系统架构.md",
     "fastblock/函数名称.md",
     "fastblock/FastBlock 第一阶段复习：上层 IO → PG.md",
     "文件操作.md",
-    "块存储/通过数据库理解块存储的使用方式.md",
-    "文件系统结构/Linux ext4：HTree 目录索引.md",
-    "欢迎.md",
-    "模版/C++ overload 模板知识点简记.md",
     "模版",
     "fastblock",
     "块存储",
