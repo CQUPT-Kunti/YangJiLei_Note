@@ -321,4 +321,3 @@ RDMA 库和 Linux RDMA 子系统负责执行解析、产生事件、通知 fd �
 **总结：**`**connect_task**` **不会自己执行，也不是状态改变触发 Poller。SPDK Poller 周期性检查共享的 event_channel，获取事件后找到对应的 connect_task，再根据 FastBlock 自己定义的状态推进连接流程。**
 
 
-# 6

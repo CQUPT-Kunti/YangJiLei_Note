@@ -70,6 +70,9 @@ async_call([this = weak_from_this()]() {
 - 对象还活着：`lock()` 成功，安全执行。
 - 对象已销毁：`lock()` 失败，不执行。
 
+weak_ptr.expired() 如果是true 说明原对象已经被销毁 拒绝执行
+weak 需要.lock（）转换为 share_ptr 才能进行调用函数
+
 ---
 
 # mutable
