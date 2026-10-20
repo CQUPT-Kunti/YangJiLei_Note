@@ -44,3 +44,24 @@ rdma_connect()                       |
 - Address：确定使用哪个本地 RDMA 设备和地址。
 - Route：确定如何通过 RDMA 网络到达对端。
 - PD：本地资源的保护域，和网络路径解析没有关系。
+
+
+--------------------------------------------------------------
+
+| 看到什么                      | 说明现在在做什么                 |
+| ------------------------- | ------------------------ |
+| `rdma_event_channel`      | 处理连接管理事件                 |
+| `rdma_cm_id`              | 操作某个 RDMA 端点或连接          |
+| `rdma_accept()`           | 接受连接                     |
+| `rdma_create_qp()`        | 创建数据传输所需的 QP             |
+| `ibv_post_recv()`         | 提前准备接收缓冲区                |
+| `ibv_post_send()`         | 提交发送或 RDMA READ/WRITE WR |
+| `ibv_poll_cq()`           | 获取网卡完成结果                 |
+| `cqe->opcode`             | 判断哪个类型的 WR 完成            |
+| `push_back()`             | 把任务交给某个后续处理阶段            |
+| `front()` / `pop_front()` | 当前阶段取出任务处理               |
+
+rdma_listen
+rdma_accept
+ibv_post_recv
+receive

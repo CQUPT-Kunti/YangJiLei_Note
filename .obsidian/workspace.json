@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "八股文/八股文索引.md",
+                "file": "fastblock/RDMA基础.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "八股文索引"
+              "title": "RDMA基础"
             }
           }
         ]
@@ -188,16 +188,20 @@
   },
   "active": "b92805cd98f7dd56",
   "lastOpenFiles": [
+    "fastblock/RDMA 设计.md",
+    "fastblock/RDMA 文件说明.md",
+    "fastblock/RDMA Rpc 框架.md",
+    "fastblock/RDMA基础.md",
+    "fastblock/SPDK.md",
+    "八股文/variant & visit.md",
+    "fastblock/QoS设计.md",
     "八股文/关键词.md",
+    "八股文/八股文索引.md",
     "八股文/无锁队列、原子操作、CAS.md",
     "八股文/enable_shared_from_this、weak_ptr、mutable、编译链接.md",
     "八股文/互斥锁、拷贝构造、内存泄漏.md",
     "八股文/IO 多路复用.md",
     "RDMA struct.md",
-    "fastblock/RDMA Rpc 框架.md",
-    "fastblock/RDMA基础.md",
-    "fastblock/RDMA 文件说明.md",
-    "fastblock/QoS设计.md",
     "fastblock/内存池设计.md",
     "fastblock/简历.md",
     "fastblock/函数名称.md",
@@ -206,15 +210,11 @@
     "RDMA面试.md",
     "README.md",
     "fastblock/系统架构.md",
-    "fastblock/SPDK.md",
     "八股文/10.12.md",
-    "八股文/八股文索引.md",
     "CQUPT_Raft/基于protobuf实现的RDMA RPC 框架.md",
     "fastblock/FastBlock-IO主流程核心类全景.md",
     "fastblock/FastBlock 结构体与缩写对照表.md",
     "CQUPT_Raft",
-    "八股文/10.9.md",
-    "学习.md",
     "八股文",
     "未命名.base",
     "未命名.canvas",

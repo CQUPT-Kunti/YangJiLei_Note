@@ -50,7 +50,7 @@ rdma_get_cm_event()
 ```
 
 # socket
-FastBlock 对一条 RDMA 连接的封装。
+FastBlock 的 `socket` 是对 RDMA CM 端点及相关通信操作的封装，既可以用作监听端点，也可以用作已连接端点。
 
 它主要负责：
 
