@@ -8,23 +8,23 @@
 
 下面按“**初始化 → 建立 QP 连接 → 注册内存 → 远程读取 → 回收资源**”组织。实际程序可以在 QP 状态转换前就分配并注册内存；此处是便于学习的一种顺序。
 
-| 阶段 | 函数 / 操作 | 作用 |
-| --- | --- | --- |
-| 设备初始化 | `ibv_get_device_list()` | 枚举本机 RDMA 设备 |
-| 设备初始化 | `ibv_open_device()` | 打开 RDMA 设备，获得 `ibv_context` |
-| 设备初始化 | `ibv_alloc_pd()` | 在指定 Context 上创建保护域 PD |
-| 设备初始化 | `ibv_create_cq()` | 创建完成队列 CQ |
-| 设备初始化 | `ibv_create_qp()` | 创建 QP，普通 RC QP 初始处于 RESET |
-| 查询与交换 | `ibv_query_port()` / `ibv_query_gid()` | 查询端口状态、MTU、选定 GID 等本地信息 |
-| 查询与交换 | TCP / 其他控制通道 | **交换 QPN、初始 PSN、GID 等 QP 连接信息** |
-| QP 连接 | `ibv_modify_qp()` | 分别执行 `RESET → INIT → RTR → RTS`，配置 RC 连接 |
-| 内存准备 | `malloc()` / `memset()` 等 | 分配和初始化普通用户内存；**不是注册 MR** |
-| 内存准备 | `ibv_reg_mr()` | 把内存注册到 PD，获得 LKey/RKey |
-| 内存信息交换 | TCP / RDMA Send/Recv | **A 将 `addr + rkey + length` 告诉 B**（用于 RDMA Read） |
-| 发起远程读取 | `ibv_post_send()` | B 向自己的 QP 的 SQ 提交 `IBV_WR_RDMA_READ` |
-| 查询完成 | `ibv_poll_cq()` | B 获取完成项，并检查 `wc.status` |
-| 资源回收 | `ibv_dereg_mr()` / `free()` | 先注销 MR，再释放普通内存；必须确保操作已结束 |
-| 资源回收 | `ibv_destroy_qp()`、`ibv_destroy_cq()`、`ibv_dealloc_pd()`、`ibv_close_device()` | 清理 QP、CQ、PD、Context 等资源 |
+| 阶段     | 函数 / 操作                                                                       | 作用                                                |
+| ------ | ----------------------------------------------------------------------------- | ------------------------------------------------- |
+| 设备初始化  | `ibv_get_device_list()`                                                       | 枚举本机 RDMA 设备                                      |
+| 设备初始化  | `ibv_open_device()`                                                           | 打开 RDMA 设备，获得 `ibv_context`                       |
+| 设备初始化  | `ibv_alloc_pd()`                                                              | 在指定 Context 上创建保护域 PD                             |
+| 设备初始化  | `ibv_create_cq()`                                                             | 创建完成队列 CQ                                         |
+| 设备初始化  | `ibv_create_qp()`                                                             | 创建 QP，普通 RC QP 初始处于 RESET                         |
+| 查询与交换  | `ibv_query_port()` / `ibv_query_gid()`                                        | 查询端口状态、MTU、选定 GID 等本地信息                           |
+| 查询与交换  | TCP / 其他控制通道                                                                  | **交换 QPN、初始 PSN、GID 等 QP 连接信息**                   |
+| QP 连接  | `ibv_modify_qp()`                                                             | 分别执行 `RESET → INIT → RTR → RTS`，配置 RC 连接          |
+| 内存准备   | `malloc()` / `memset()` 等                                                     | 分配和初始化普通用户内存；**不是注册 MR**                          |
+| 内存准备   | `ibv_reg_mr()`                                                                | 把内存注册到 PD，获得 LKey/RKey                            |
+| 内存信息交换 | TCP / RDMA Send/Recv                                                          | **A 将 `addr + rkey + length` 告诉 B**（用于 RDMA Read） |
+| 发起远程读取 | `ibv_post_send()`                                                             | B 向自己的 QP 的 SQ 提交 `IBV_WR_RDMA_READ`              |
+| 查询完成   | `ibv_poll_cq()`                                                               | B 获取完成项，并检查 `wc.status`                           |
+| 资源回收   | `ibv_dereg_mr()` / `free()`                                                   | 先注销 MR，再释放普通内存；必须确保操作已结束                          |
+| 资源回收   | `ibv_destroy_qp()`、`ibv_destroy_cq()`、`ibv_dealloc_pd()`、`ibv_close_device()` | 清理 QP、CQ、PD、Context 等资源                           |
 
 **ASCII 流程图（紧跟关键函数表；A 提供数据，B 主动读）：**
 
@@ -318,13 +318,25 @@ A 必须保证 B 读取期间其 MR 有效、地址范围合法、数据已准�
 
 ## 4.3 Read、Write、Send 的区别
 
-| 操作 | 谁主动提交 `ibv_post_send()` | 对端需要 `ibv_post_recv()` 吗？ | 需要从对端拿什么？ |
-| --- | --- | --- | --- |
-| **RDMA Read** | 读取者（本例 B） | 不需要 | A 的 `addr + rkey`，以及合法长度 |
-| **RDMA Write** | 写入者（例如 A） | 普通 Write 不需要 | B 的 `addr + rkey`，以及合法长度 |
-| **RDMA Send** | 发送者（例如 A） | **需要**：B 预先提交 Receive WR（或 SRQ 接收 WR） | 不需要对端接收缓冲区的 RKey |
+| 操作             | 谁主动提交 `ibv_post_send()` | 对端需要 `ibv_post_recv()` 吗？             | 需要从对端拿什么？                |
+| -------------- | ----------------------- | ------------------------------------- | ------------------------ |
+| **RDMA Read**  | 读取者（本例 B）               | 不需要                                   | A 的 `addr + rkey`，以及合法长度 |
+| **RDMA Write** | 写入者（例如 A）               | 普通 Write 不需要                          | B 的 `addr + rkey`，以及合法长度 |
+| **RDMA Send**  | 发送者（例如 A）               | **需要**：B 预先提交 Receive WR（或 SRQ 接收 WR） | 不需要对端接收缓冲区的 RKey         |
 
 `"Hello RDMA"` 只是 Demo 的测试数据，不是 RDMA 标准定义的握手。项目中可以发送自定义的 `QP_READY` 控制消息、Raft AppendEntries 消息或日志数据；**数据传输成功不等于业务已经处理或持久化成功**。
+
+### IBV_WR_SEND
+
+机器A 只知道发送给机器B 但是完全不知道是发送到机器B的哪个地址
+机器B 在收到数据后，用户程序不会给机器A 发送确认
+而是 RNIC(网卡) 会给机器A发送 一个ACK。机器A的RNIC 收到后会给用户程序返回一个 CQE：IBV_WC_SUCCESS
+
+### IBV_WR_RDMA_WRITE
+
+直接写入别人的内存 不需要RQ里面的 WQE
+
+
 
 ## 4.4 完成与返回值
 

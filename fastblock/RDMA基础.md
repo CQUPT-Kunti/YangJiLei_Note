@@ -64,4 +64,3 @@ rdma_connect()                       |
 rdma_listen
 rdma_accept
 ibv_post_recv
-receive
