@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fastblock/快速复习.md",
-                "mode": "source",
+                "file": "InfiniStore/传输方式.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "快速复习"
+              "title": "传输方式"
             }
           }
         ]
@@ -188,8 +188,12 @@
   },
   "active": "b92805cd98f7dd56",
   "lastOpenFiles": [
-    "fastblock/项目介绍.md",
+    "InfiniStore/介绍.md",
+    "InfiniStore/传输方式.md",
+    "八股文/关键词.md",
+    "InfiniStore",
     "fastblock/快速复习.md",
+    "fastblock/项目介绍.md",
     "RDMA.md",
     "fastblock/RDMA基础.md",
     "fastblock/RDMA Rpc 框架.md",
@@ -202,7 +206,6 @@
     "RDMA struct.md",
     "fastblock/SPDK.md",
     "八股文/variant & visit.md",
-    "八股文/关键词.md",
     "八股文/八股文索引.md",
     "八股文/无锁队列、原子操作、CAS.md",
     "八股文/enable_shared_from_this、weak_ptr、mutable、编译链接.md",
@@ -212,8 +215,6 @@
     "fastblock/简历.md",
     "fastblock/函数名称.md",
     "fastblock/系统架构.md",
-    "八股文/10.12.md",
-    "CQUPT_Raft/基于protobuf实现的RDMA RPC 框架.md",
     "CQUPT_Raft",
     "八股文",
     "未命名.base",
