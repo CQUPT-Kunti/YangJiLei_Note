@@ -104,4 +104,10 @@ socket
 
 发送和接收：
 
+---
 
+## 相关笔记
+
+- [[学习|C++ 学习地图]]
+- [[fastblock/内存池设计|内存池设计]]
+- [[fastblock/RDMA Rpc 框架|RDMA Rpc 框架]]

@@ -38,3 +38,10 @@ fastblocks 有controller，但 FastBlock 没有自己重新定义一套 Controll
 
 # 服务端：接收 RPC，找到方法，执行服务，发送响应
 
+---
+
+## 相关笔记
+
+- [[学习|C++ 学习地图]]
+- [[fastblock/RDMA Rpc 框架|RDMA Rpc 框架]]
+- [[RDMA 索引]]

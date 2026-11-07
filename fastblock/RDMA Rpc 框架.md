@@ -323,4 +323,12 @@ RDMA 库和 Linux RDMA 子系统负责执行解析、产生事件、通知 fd �
 # channel
 channel 是专门来管理连接和断联的
 
+---
 
+## 相关笔记
+
+- [[学习|C++ 学习地图]]
+- [[RDMA 索引]]
+- [[fastblock/RDMA基础|RDMA 基础]]
+- [[fastblock/RDMA 文件说明|RDMA 文件说明]]
+- [[CQUPT_Raft/基于protobuf实现的RDMA RPC 框架|基于 protobuf 实现的 RDMA RPC 框架]]

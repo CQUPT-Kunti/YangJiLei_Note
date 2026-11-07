@@ -64,3 +64,12 @@ rdma_connect()                       |
 rdma_listen
 rdma_accept
 ibv_post_recv
+
+---
+
+## 相关笔记
+
+- [[学习|C++ 学习地图]]
+- [[RDMA 索引]]
+- [[fastblock/RDMA Rpc 框架|RDMA Rpc 框架]]
+- [[fastblock/项目介绍|FastBlock 项目介绍]]

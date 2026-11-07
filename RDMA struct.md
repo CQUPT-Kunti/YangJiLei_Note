@@ -30,3 +30,11 @@ rpc_request
 ├── reply_data        → 响应传输内容
 └── start_at          → 超时/耗时
 ```
+
+---
+
+## 相关笔记
+
+- [[学习|C++ 学习地图]]
+- [[RDMA 索引]]
+- [[fastblock/RDMA Rpc 框架|RDMA Rpc 框架]]

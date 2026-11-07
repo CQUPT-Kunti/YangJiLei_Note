@@ -894,3 +894,10 @@ Token重新大于0以后，
 - **UNMAP/Delete 真正的数据路径还没实现。** QoS 已经能给它算 `1 IOPS + 0 BW`，但你前面确认了 FastBlock bdev 当前 UNMAP 最终还是直接失败，所以 QoS 支持不等于 delete 功能完整。
 - **测试还没正式做。** 至少还要验证 IOPS、Bandwidth、负 token、pending 恢复、burst、FLUSH、多个 Volume、长时间 fio，以及 QoS disabled 时性能/行为是否和原来一致。
 - **正式构建环境还有 Ninja/Makefiles 冲突。** 目前单文件和临时链接通过，但正式 build 还没真正跑通。
+
+---
+
+## 相关笔记
+
+- [[学习|C++ 学习地图]]
+- [[fastblock/FastBlock Volume QoS 前置调研|FastBlock Volume QoS 前置调研]]

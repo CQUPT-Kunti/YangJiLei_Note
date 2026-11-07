@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "InfiniStore/传输方式.md",
-                "mode": "preview",
+                "file": "HomeObject/介绍.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "传输方式"
+              "title": "介绍"
             }
           }
         ]
@@ -188,8 +188,11 @@
   },
   "active": "b92805cd98f7dd56",
   "lastOpenFiles": [
-    "InfiniStore/介绍.md",
+    "sheepdog",
     "InfiniStore/传输方式.md",
+    "HomeObject/介绍.md",
+    "HomeObject",
+    "InfiniStore/介绍.md",
     "八股文/关键词.md",
     "InfiniStore",
     "fastblock/快速复习.md",
@@ -213,8 +216,6 @@
     "八股文/IO 多路复用.md",
     "fastblock/内存池设计.md",
     "fastblock/简历.md",
-    "fastblock/函数名称.md",
-    "fastblock/系统架构.md",
     "CQUPT_Raft",
     "八股文",
     "未命名.base",
@@ -224,7 +225,6 @@
     "fastblock",
     "块存储",
     "文件系统结构",
-    "磁盘虚拟",
-    "分布式存储细节"
+    "磁盘虚拟"
   ]
 }
