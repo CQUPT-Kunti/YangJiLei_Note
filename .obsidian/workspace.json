@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sheepdog/Sheepdog 项目简介.md",
+                "file": "RDMA面试.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sheepdog 项目简介"
+              "title": "RDMA面试"
             }
           }
         ]
@@ -188,8 +188,10 @@
   },
   "active": "b92805cd98f7dd56",
   "lastOpenFiles": [
-    "HomeObject/介绍.md",
+    "sheepdog/用户端虚拟机/这个部分主要是分布式业务的上层.md",
     "sheepdog/Sheepdog 项目简介.md",
+    "sheepdog/用户端虚拟机",
+    "HomeObject/介绍.md",
     "sheepdog",
     "InfiniStore/传输方式.md",
     "HomeObject",
@@ -216,7 +218,6 @@
     "八股文/互斥锁、拷贝构造、内存泄漏.md",
     "八股文/IO 多路复用.md",
     "fastblock/内存池设计.md",
-    "fastblock/简历.md",
     "CQUPT_Raft",
     "八股文",
     "未命名.base",
@@ -224,7 +225,6 @@
     "未命名 1.canvas",
     "模版",
     "fastblock",
-    "块存储",
-    "文件系统结构"
+    "块存储"
   ]
 }
